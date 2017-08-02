@@ -350,7 +350,7 @@ var Page = function (_Component) {
                                         _react2.default.createElement(_components.FontIcon, { icon: 'mock', font: 'tools', style: { fontSize: 30 }, className: 'mr-10' }),
                                         _react2.default.createElement(
                                             'span',
-                                            { className: 'mr-15' },
+                                            { className: 'mr-15', style: { whiteSpace: 'nowrap' } },
                                             project.alias
                                         )
                                     )
@@ -358,7 +358,7 @@ var Page = function (_Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'mb-5' },
+                                { className: 'mb-15' },
                                 _react2.default.createElement(
                                     'span',
                                     { className: 'text-promote' },

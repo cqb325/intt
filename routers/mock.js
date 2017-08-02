@@ -1,7 +1,7 @@
 var Mock = require("mockjs");
 
 module.exports = {
-    '/:projectName/*': async function(){
+    '/:projectName/*!ALL': async function(){
         let {projectName, callback} = this.params;
         var url = this.ctx.url;
 

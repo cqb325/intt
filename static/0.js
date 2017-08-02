@@ -753,7 +753,8 @@ var Page = function (_React$Component) {
                     ret.push(this.showProp(key, propTypes[key], defaultValues[key]));
                 }
             }
-            if (this.refs.rules) {
+            if (this.refs.rules && this.refs.rules.compKey !== this.state.ref) {
+                this.refs.rules.compKey = this.state.ref;
                 this.refs.rules.reset(lastProps.rules || {});
             }
             return ret;

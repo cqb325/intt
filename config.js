@@ -7,7 +7,7 @@ module.exports = {
         'database': 'api'
     },
     dev: true,
-    port: 8084,
+    port: 8415,
     root: '',
     favicon: '/static/favicon.ico',
     static: '/static',

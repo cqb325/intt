@@ -274,29 +274,27 @@ var Page = function (_Component) {
                             _components.Card,
                             { style: { color: '#20A0FF' },
                                 className: 'mb-15 project-item animated flipInX' },
-                            _react2.default.createElement(_components.FontIcon, { icon: 'api', font: 'tools', style: { fontSize: 30 }, className: 'mr-10' }),
-                            intf.schema ? _react2.default.createElement(_components.FontIcon, { icon: 'rule', font: 'tools', className: 'mr-10', style: { fontSize: 20 }, color: '#13CE66' }) : null,
-                            type,
                             _react2.default.createElement(
                                 'div',
-                                { className: 'pull-right mr-10 mt-10' },
-                                lazy,
-                                _react2.default.createElement(_components.FontIcon, { icon: 'request', font: 'tools', className: 'mr-5', title: '\u8BF7\u6C42\u6570' }),
+                                { style: { whiteSpace: 'nowrap' } },
+                                _react2.default.createElement(_components.FontIcon, { icon: 'api', font: 'tools', style: { fontSize: 30 }, className: 'mr-10' }),
+                                intf.schema ? _react2.default.createElement(_components.FontIcon, { icon: 'rule', font: 'tools', className: 'mr-10', style: { fontSize: 20 }, color: '#13CE66' }) : null,
+                                type,
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'mr-10' },
-                                    intf.reqNum
-                                ),
-                                _react2.default.createElement(_components.FontIcon, { icon: 'clock', font: 'tools', className: 'mr-10', title: '\u521B\u5EFA\u65F6\u95F4' }),
-                                _react2.default.createElement(
-                                    'span',
-                                    null,
-                                    intf.ct_time
+                                    'div',
+                                    { className: 'pull-right mr-10 mt-10', style: { whiteSpace: 'nowrap' } },
+                                    lazy,
+                                    _react2.default.createElement(_components.FontIcon, { icon: 'request', font: 'tools', className: 'mr-5', title: '\u8BF7\u6C42\u6570' }),
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'mr-10' },
+                                        intf.reqNum
+                                    )
                                 )
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { style: { fontSize: 24 } },
+                                { style: { fontSize: 20, position: 'relative' } },
                                 _react2.default.createElement(
                                     _reactRouterDom.Link,
                                     { to: '/interface/' + intf.id },
@@ -308,7 +306,7 @@ var Page = function (_Component) {
                                 ),
                                 _react2.default.createElement(
                                     'span',
-                                    { className: 'pull-right' },
+                                    { style: { position: 'absolute', right: 10, top: 0 } },
                                     _react2.default.createElement(_components.FontIcon, { className: 'text-success mr-5', icon: 'copy', font: 'tools',
                                         style: { fontSize: 15 }, title: '\u590D\u5236\u63A5\u53E3',
                                         onClick: _this3.showCopyConfirm.bind(_this3, intf.id) }),
