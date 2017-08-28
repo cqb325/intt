@@ -1,0 +1,63 @@
+.cm-accordion {
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 2px 0 10px rgba(0, 0, 0, 0.2);
+  background: #475669;
+  color: #ffffff;
+}
+.cm-accordion.white {
+  background: #fff;
+  color: #1f2d3d;
+}
+.cm-accordion.white.cm-accordion-bordered {
+  border: 1px solid #e0e6ed;
+}
+.cm-accordion.white .cm-accordion-item {
+  border-bottom: 1px solid #e0e6ed;
+}
+.cm-accordion.white .cm-accordion-item-head:hover {
+  background: #f0f3f6;
+}
+.cm-accordion.white .cm-accordion-item-active .cm-accordion-item-head {
+  background: #f0f3f6;
+}
+.cm-accordion.cm-accordion-bordered {
+  border: 1px solid #3d4a5a;
+  border-radius: 3px;
+}
+.cm-accordion .cm-accordion-item:last-child {
+  border-bottom: none;
+}
+.cm-accordion-wrap {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cm-accordion-item {
+  border-bottom: 1px solid #3d4a5a;
+}
+.cm-accordion-item-head {
+  padding: 12px 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+}
+.cm-accordion-item-head:hover {
+  background: #324057;
+}
+.cm-accordion-item-icon {
+  margin-right: 6px;
+}
+.cm-accordion-item-body {
+  display: none;
+  padding: 12px;
+}
+.cm-accordion-item-active .cm-accordion-item-head {
+  background: #324057;
+}

@@ -1,0 +1,61 @@
+
+@font-face {font-family: "tools";
+  src: url('iconfont.eot?t=1501492352350'); /* IE9*/
+  src: url('iconfont.eot?t=1501492352350#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1501492352350') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1501492352350') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1501492352350#tools') format('svg'); /* iOS 4.1- */
+}
+
+.tools {
+  font-family:"tools" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tools-mock:before { content: "\e600"; }
+
+.tools-delete:before { content: "\e66d"; }
+
+.tools-clock:before { content: "\e621"; }
+
+.tools-request:before { content: "\e6ca"; }
+
+.tools-string:before { content: "\e809"; }
+
+.tools-s07:before { content: "\e62a"; }
+
+.tools-pass:before { content: "\e632"; }
+
+.tools-check:before { content: "\e641"; }
+
+.tools-edit:before { content: "\e61f"; }
+
+.tools-apis:before { content: "\e68d"; }
+
+.tools-bool:before { content: "\e618"; }
+
+.tools-rule:before { content: "\e6f2"; }
+
+.tools-project:before { content: "\e609"; }
+
+.tools-log:before { content: "\e601"; }
+
+.tools-number:before { content: "\e602"; }
+
+.tools-auto-form:before { content: "\e64c"; }
+
+.tools-lazy:before { content: "\e613"; }
+
+.tools-copy:before { content: "\e659"; }
+
+.tools-array:before { content: "\e630"; }
+
+.tools-obj:before { content: "\e631"; }
+
+.tools-ui:before { content: "\e699"; }
+
+.tools-api:before { content: "\e697"; }
+
