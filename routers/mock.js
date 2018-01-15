@@ -1,11 +1,20 @@
 var Mock = require("mockjs");
 
+var sleep = function (time) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            // 返回 ‘ok’
+            resolve('ok');
+        }, time);
+    })
+};
+
 module.exports = {
     '/:projectName/*!ALL': async function(){
         let {projectName, callback} = this.params;
         var url = this.ctx.url;
 
-        let resData = (inter, data)=>{
+        let resData = async (inter, data, lazyTime)=>{
             if(inter.jsonp){
                 var callback = callback || "callback";
                 var resStr = callback + "(" + JSON.stringify(data) + ")";
@@ -17,6 +26,10 @@ module.exports = {
                 this.ctx.set("Access-Control-Request-Method", "GET, POST, OPTIONS");
                 this.ctx.set("Access-Control-Allow-Origin", origin);
                 this.ctx.set("Access-Control-Allow-Credentials", "true");
+
+                if(lazyTime){
+                    await sleep(lazyTime);
+                }
                 this.json(data);
             }
 
@@ -42,13 +55,12 @@ module.exports = {
                             }
 
                             if (interFace.lazy) {
-                                setTimeout(()=>{
-                                    resData(interFace, data);
-                                }, interFace.lazyTime || 2000);
+                                await resData(interFace, data, interFace.lazyTime);
                             } else {
                                 resData(interFace, data);
                             }
                         }catch (e){
+                            console.log(e);
                             this.json({status: 404, msg: "/"+url+"接口模板存在问题"});
                         }
                         break;
