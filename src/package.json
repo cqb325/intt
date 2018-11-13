@@ -133,7 +133,7 @@
     "build:umd": "webpack --config build/webpack.build.js",
     "build:website": "NODE_ENV=production webpack --config build/webpack.build-website.config.js --display-modules --sort-modules-by size",
     "clean": "rm -rf temp coverage",
-    "dev": "webpack-dev-server --inline --hot --history-api-fallback --config build/webpack.config.js --host 192.168.105.202"
+    "dev": "./webpack-dev-server --inline --hot --history-api-fallback --config build/webpack.config.js --host 192.168.105.202"
   },
   "version": "0.2.0"
 }

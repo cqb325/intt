@@ -98,7 +98,12 @@ exports.default = function () {
 								dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
 								url = url + '?' + dataStr;
 							}
-						}
+                        }
+                        if(url.indexOf('?') !== -1){
+                            url = url + '&_=' +new Date().getTime();
+                        } else {
+                            url += '?_=' +new Date().getTime();
+                        }
 
 						if (!(window.fetch && method == 'fetch')) {
 							_context.next = 21;

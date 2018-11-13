@@ -342,7 +342,7 @@ var Page = function (_Component) {
                             )
                         ),
                         _react2.default.createElement(_components.FormControl, { type: 'text', name: 'desc', label: 'Desc: ', height: 80, itemStyle: width }),
-                        _react2.default.createElement(_components.FormControl, { type: 'json', className: 'top-label-group', required: true, name: 'template', label: 'Template: ', height: 200, width: 450 })
+                        _react2.default.createElement(_components.FormControl, { type: 'json', className: 'top-label-group', required: true, name: 'template', label: 'Template: ', height: 500, width: 450 })
                     ),
                     _react2.default.createElement(
                         'div',
@@ -532,7 +532,13 @@ exports.default = function () {
 								dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
 								url = url + '?' + dataStr;
 							}
-						}
+                        }
+                        
+                        if(url.indexOf('?') !== -1){
+                            url = url + '&_=' +new Date().getTime();
+                        } else {
+                            url += '?_=' +new Date().getTime();
+                        }
 
 						if (!(window.fetch && method == 'fetch')) {
 							_context.next = 21;

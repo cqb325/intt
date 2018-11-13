@@ -22,7 +22,9 @@ module.exports = {
             }else {
                 //跨域
                 var origin = this.ctx.get('origin');
-                this.ctx.set("Access-Control-Request-Headers", "Access-Control-Allow-Headers, Access-Control-Request-Method, Access-Control-Request-Headers, Origin, No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, content-type, X-E4M-With");
+                var type = this.ctx.get('Content-Type');
+                this.ctx.set("Access-Control-Request-Headers", "Access-Control-Allow-Headers, Access-Control-Request-Method, Access-Control-Request-Headers, Origin, No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With");
+                this.ctx.set("Access-Control-Allow-Headers", "Content-Type, X-E4M-With, X-Request-With");
                 this.ctx.set("Access-Control-Request-Method", "GET, POST, OPTIONS");
                 this.ctx.set("Access-Control-Allow-Origin", origin);
                 this.ctx.set("Access-Control-Allow-Credentials", "true");

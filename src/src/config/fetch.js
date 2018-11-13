@@ -16,6 +16,11 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
 			url = url + '?' + dataStr;
 		}
 	}
+	if(url.indexOf('?') !== -1){
+		url = url + '&_=' +new Date().getTime();
+	} else {
+		url += '?_=' +new Date().getTime();
+	}
 
 	if (window.fetch && method == 'fetch') {
 		let requestConfig = {

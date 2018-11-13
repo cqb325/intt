@@ -635,7 +635,7 @@ var Rules = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', { ref: 'rules', style: { height: 200 } });
+            return _react2.default.createElement('div', { ref: 'rules', style: { height: 500 } });
         }
     }]);
 

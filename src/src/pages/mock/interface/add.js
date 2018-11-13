@@ -68,7 +68,7 @@ class Page extends Component{
                             <span>ms</span>
                         </Form.Row>
                         <FormControl type='text' name='desc' label='Desc: ' height={80} itemStyle={width} />
-                        <FormControl type='json' className='top-label-group' required name='template' label='Template: ' height={200} width={450} />
+                        <FormControl type='json' className='top-label-group' required name='template' label='Template: ' height={500} width={450} />
                     </Form>
                     <div style={{marginLeft: 90, marginTop: 60}}>
                         <Button raised theme='primary' onClick={this.saveInterface.bind(this)}>保 存</Button>
